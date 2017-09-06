@@ -36,11 +36,11 @@ func getTotalNum(a int) int {
 	return total
 }
 
-var movieid110 *string = flag.String("id", "344264", "Use -id 110")
+var id *string = flag.String("id", "344264", "movieid")
 
 func main() {
-	movieid, _ := strconv.Atoi(*movieid110)
 	flag.Parse()
+	movieid, _ := strconv.Atoi(*id)
 	fmt.Println("===========猫眼ID号(cic):", movieid)
 	//movieid := 344264
 	maxnum := getTotalNum(movieid)
